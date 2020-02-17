@@ -1,0 +1,54 @@
+.main-footer {
+    margin: 0 auto;
+    width: 1440px;
+    height: 372px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+  }
+  
+  .main-footer__wrapper {
+    margin: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  .main-footer__about-mini,
+  .main-footer__subscription {
+    width: 260px;
+  }
+  
+  .main-footer__link {
+    line-height: 17px;
+    color: rgba(31, 32, 65, 0.5);
+  }
+  
+  .main-footer__subscription .main-footer__link {
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+  }
+  
+  .main-footer__item:first-child .main-footer__link {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: rgba(31, 32, 65, 1);
+  }
+  
+  .main-footer__item {
+    margin-bottom: 20px;
+  }
+  
+  .main-footer__email {
+    width: 260px;
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+  
+  .main-footer__email::placeholder {
+    color: rgba(31, 32, 65, 0.25);
+  }

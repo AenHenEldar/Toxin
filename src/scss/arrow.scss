@@ -1,0 +1,125 @@
+.input-arrow-down,
+.button-arrow-right,
+.arrow-down,
+.input-arrow-right,
+.arrow-right,
+.arrow-left {
+  position: relative;
+  cursor: pointer;
+}
+
+.arrow-right,
+.arrow-left {
+  width: 20px;
+  height: 20px;
+}
+
+.arrow-down {
+  margin-right: 24px;
+}
+
+.arrow-down:before,
+.input-arrow-down:before {
+  content: '';
+  right: -18px;
+  bottom: 5px;
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  transform: rotate(45deg);
+  border-bottom: 2px solid rgba(31, 32, 65, 0.5);
+  border-right: 2px solid rgba(31, 32, 65, 0.5);
+}
+
+.input-arrow-down:before {
+  right: 20px;
+  bottom: 35px;
+}
+
+.button-arrow-right:before {
+  content: '';
+  position: absolute;
+  right: 15px;
+  bottom: 17px;
+  width: 11px;
+  height: 11px;
+  transform: rotate(-45deg);
+  border-bottom: 2px solid #FFFFFF;
+  border-right: 2px solid #FFFFFF;
+}
+
+.button-arrow-right:after {
+  content: '';
+  position: absolute;
+  right: 15px;
+  bottom: 21.39px;
+  width: 13px;
+  height: 13px;
+  border-bottom: 2px solid #FFFFFF;
+}
+
+.input-arrow-right:before {
+  content: '';
+  position: absolute;
+  right: 15px;
+  bottom: 32px;
+  width: 11px;
+  height: 11px;
+  transform: rotate(-45deg);
+  border-bottom: 2px solid #8BA4F9;
+  border-right: 2px solid #8BA4F9;
+}
+
+.input-arrow-right:after {
+  content: '';
+  position: absolute;
+  right: 15px;
+  bottom: 36.5px;
+  width: 13px;
+  height: 13px;
+  border-bottom: 2px solid #8BA4F9;
+}
+
+.arrow-right:before {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  width: 11px;
+  height: 11px;
+  transform: rotate(-45deg);
+  border-bottom: 2px solid #8BA4F9;
+  border-right: 2px solid #8BA4F9;
+}
+
+.arrow-right:after {
+  content: '';
+  position: absolute;
+  bottom: 42%;
+  width: 13px;
+  height: 13px;
+  border-bottom: 2px solid #8BA4F9;
+}
+
+.arrow-left:before {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 12%;
+  width: 11px;
+  height: 11px;
+  transform: rotate(135deg);
+  border-bottom: 2px solid #8BA4F9;
+  border-right: 2px solid #8BA4F9;
+}
+
+.arrow-left:after {
+  content: '';
+  position: absolute;
+  bottom: 42%;
+  left: 12%;
+  width: 13px;
+  height: 13px;
+  border-bottom: 2px solid #8BA4F9;
+}
+

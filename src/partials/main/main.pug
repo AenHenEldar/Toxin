@@ -1,0 +1,111 @@
+main.main
+  .wrapper
+    .main__wrapper
+      .main__rooms
+        h1 Найдём номера под ваши пожелания
+        form.main__form-rooms(action="index.html" method="post")
+          .main__input-wrapper
+            .main__input-container1
+              label Прибытие 
+              input.field.main__date-field(type="text" placeholder='ДД.ММ.ГГГГ' readonly)
+              .input-arrow-down.arrow-calendar
+            .main__input-container2
+              label Выезд
+              input.field.main__date-field(type="text" placeholder='ДД.ММ.ГГГГ' readonly)
+              .input-arrow-down.arrow-calendar
+          label Гости 
+          input.field.main__guest-field(type="text" placeholder='Сколько гостей' readonly)
+          .input-arrow-down.arrow-guest
+          button.button.form-button.button-arrow-right(type='button') Подобрать номер
+        .calender#calender
+        .main__calendar
+          .main__calendar-wrapper
+            .main__calendar-header
+              .arrow-left
+              h2 Август 2019
+              .arrow-right
+            .main__calendar-main
+              ul.main__calendar-list.main__calendar-monday
+                li.main__calendar-item Пн
+                li.main__calendar-item 
+                li.main__calendar-item 
+                li.main__calendar-item 
+                li.main__calendar-item 
+                li.main__calendar-item 
+              ul.main__calendar-list.main__calendar-tuesday
+                li.main__calendar-item Вт
+                li.main__calendar-item 
+                li.main__calendar-item 
+                li.main__calendar-item 
+                li.main__calendar-item 
+                li.main__calendar-item 
+              ul.main__calendar-list.main__calendar-wednesday
+                li.main__calendar-item Ср
+                li.main__calendar-item 
+                li.main__calendar-item 
+                li.main__calendar-item 
+                li.main__calendar-item 
+                li.main__calendar-item 
+              ul.main__calendar-list.main__calendar-thursday
+                li.main__calendar-item Чт
+                li.main__calendar-item 
+                li.main__calendar-item 
+                li.main__calendar-item 
+                li.main__calendar-item 
+                li.main__calendar-item 
+              ul.main__calendar-list.main__calendar-friday
+                li.main__calendar-item Пт
+                li.main__calendar-item 
+                li.main__calendar-item 
+                li.main__calendar-item 
+                li.main__calendar-item 
+                li.main__calendar-item
+              ul.main__calendar-list.main__calendar-saturday
+                li.main__calendar-item Сб
+                li.main__calendar-item 
+                li.main__calendar-item 
+                li.main__calendar-item 
+                li.main__calendar-item 
+                li.main__calendar-item 
+              ul.main__calendar-list.main__calendar-sunday
+                li.main__calendar-item Вс
+                li.main__calendar-item 
+                li.main__calendar-item 
+                li.main__calendar-item 
+                li.main__calendar-item 
+                li.main__calendar-item 
+            .main__calendar-footer
+              a.main__link(href="#1") очистить
+              a.main__link.main__link--apply(href="#2") применить
+        .main__guests
+          .main__guests-wrapper
+            .main__guests-counter
+              .main__guests-age
+                ul.main__age-list
+                  li Взрослые
+                  li Дети
+                  li Младенцы
+              .main__guests-count
+                ul.main__minuses
+                  li -
+                  li -
+                  li -
+                ul.main__numbers
+                  li 0
+                  li 0
+                  li 0
+                ul.main__pluses
+                  li +
+                  li +
+                  li +
+            .main__guests-footer
+              a.main__link#clear(href="#1") очистить
+              a.main__link.main__link--apply(href="#2") применить
+                
+      div.main__about-mini
+        p Лучшие номера для вашей работы, отдыха и просто вдохновения
+include main-footer/main-footer
+
+      
+      
+      

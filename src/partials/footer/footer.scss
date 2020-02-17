@@ -1,0 +1,45 @@
+.footer {
+    border-top: 1px solid rgba(31, 32, 65, 0.25);
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    width: 1534px;
+    margin: 0 auto;
+  }
+  
+  .footer__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 25px 0;
+  }
+  
+  .footer__copyright {
+    line-height: 17px;
+  }
+  
+  .footer__icons {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .footer__twit {
+    background: url('../src/img/svg/twit-logo.svg') no-repeat;
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+  }
+  
+  .footer__face {
+    background: url('../src/img/svg/face-logo.svg') no-repeat;
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+  }
+  
+  .footer__inst {
+    background: url('../src/img/svg/inst-logo.svg') no-repeat;
+    width: 24px;
+    height: 24px;
+  }
+  
