@@ -1,8 +1,5 @@
 $(document).ready(function () {
 
-
-
-
     let today = new Date();
     let currentMonth = today.getMonth();
     let currentYear = today.getFullYear();
@@ -12,29 +9,29 @@ $(document).ready(function () {
         return new Date(year, month, 0).getDate();
     }
 
-    console.log((new Date(2020, 2)).getDay());
-    console.log(typeof daysInMonth(1, 2020));
-    console.log(daysInMonth(3, 2020));
-
-
-
-
     function showCalendar(month, year) {
         let firstDay = (new Date(year, month)).getDay();
-        if(firstDay == 0) {
+        let date = 1;
+        let nextMonth = 1;
+        let row = 6;
+        $('.main__calendar-item:not(:first-child())').remove();
+        if (firstDay == 0) {
             firstDay = 7;
         }
-        let date = 1;
-        let n = 1;
-        for (let i = 2; i <= 7; i++) {
+        if (firstDay == 6 && daysInMonth(month + 1, year) == 31 || firstDay == 7) {
+            row = 7;
+        }
+
+        for (let i = 2; i <= row; i++) {
             for (let j = 1; j <= 7; j++) {
+                $(`.main__calendar-list:nth-child(${j}`).append('<li class="main__calendar-item"></li>');
                 let item = $(`.main__calendar-list:nth-child(${j}) .main__calendar-item:nth-child(${i})`);
                 item.removeClass('main__calendar-today');
                 item.css('opacity', '0.9');
                 if (i === 2 && j < firstDay) {
                     item.html(String(daysInMonth(month, year) - firstDay + j + 1)).css('opacity', '0.4');
-                } else if(date > daysInMonth(month + 1, year)) {
-                    item.html(String(n++)).css('opacity', '0.4');
+                } else if (date > daysInMonth(month + 1, year)) {
+                    item.html(String(nextMonth++)).css('opacity', '0.4');
                 } else {
                     if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
                         item.addClass('main__calendar-today');
@@ -44,14 +41,24 @@ $(document).ready(function () {
                 }
             }
         }
+        $('.main__calendar-item').css('line-height', '40px');
+        $('.main__calendar-item').css('padding', '1px 12px 1px 12px');
+        $('.main__calendar-item').css('margin', '-1px -12px -1px -12px');
+        if(row == 7) {
+            $('.main__calendar-item').css('line-height', '32px');
+            $('.main__calendar-item').css('padding', '3px 12px 3px 12px');
+            $('.main__calendar-item').css('margin', '-3px -12px -3px -12px');
+        }  
     }
 
     showCalendar(currentMonth, currentYear);
 
 
-
+    // current month and year
 
     $('.main__calendar-header h2').html(months[today.getMonth()] + ' ' + today.getFullYear());
+
+    // click on arrow to change page of calendar
 
     $('.arrow-right').click(function () {
         ++currentMonth;
@@ -73,10 +80,8 @@ $(document).ready(function () {
         showCalendar(currentMonth, currentYear);
     })
 
-
-
-
     // click on button 'clear'
+
     $('#clear').click(function () {
         $('.main__guest-field').attr('placeholder', 'Сколько гостей');
         let length = $('.main__numbers li').length;
@@ -85,7 +90,9 @@ $(document).ready(function () {
             $(`.main__minuses li:nth-child(${i})`).css('opacity', '0.25');
         }
     })
+
     // output value in input
+
     function addGuestsNumber() {
 
         function toDecline(number, declination_forms) {
@@ -110,6 +117,7 @@ $(document).ready(function () {
     }
 
     // plus 1 or minus 1 or add opacity like disabled for li 
+
     $('.main__guests-count li').click(function () {
         let index = $(this).index() + 1;
         let curentValue = $(`.main__numbers li:nth-child(${index})`).html();
@@ -135,7 +143,9 @@ $(document).ready(function () {
         $(`.main__numbers li:nth-child(${index})`).html(value);
         addGuestsNumber();
     });
+
     // click on arrow or input add submenu and square border for input
+
     $('.arrow-guest, .main__guest-field').click(function () {
         $('.main__guests').toggle();
         $('.main__guests').css('display') == 'none' ? $('.main__guest-field').css('border-bottom-left-radius', '4px').css('border-bottom-right-radius', '4px') : $('.main__guest-field').css('border-bottom-left-radius', '0').css('border-bottom-right-radius', '0');
