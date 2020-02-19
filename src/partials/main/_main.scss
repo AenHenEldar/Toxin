@@ -1,7 +1,6 @@
 .main {
   background: url('../src/img/jpg/hotel-main.jpg') no-repeat center;
   margin: 0 auto;
-  width: 1534px;
   height: 1022px;
   background-size: cover;
 }
@@ -15,14 +14,14 @@
 }
 
 .main__about-mini {
-  width: 297px;
+  width: 25%;
   text-align: right;
   align-self: flex-end;
 }
 
 .main__rooms {
   position: relative;
-  width: 380px;
+  width: 382px;
   height: 374px;
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.12);
@@ -30,17 +29,6 @@
   border-radius: 4px;
   margin-top: 70px;
   padding: 40px 30px 30px 30px;
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Safari */
-  -khtml-user-select: none;
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-  user-select: none;
 }
 
 .main__form-rooms {
