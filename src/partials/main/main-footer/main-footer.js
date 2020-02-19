@@ -7,7 +7,5 @@ $(document).ready(function () {
             $(this).toggleClass('arrow-active');
             $(this).siblings().toggleClass('item-active');
         })
-    } else {
-
     }
 })
