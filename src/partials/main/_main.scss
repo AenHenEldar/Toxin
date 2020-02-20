@@ -29,6 +29,15 @@
   border-radius: 4px;
   margin-top: 70px;
   padding: 40px 30px 30px 30px;
+  @media (max-width: 400px) {
+    transform: scale(0.8);
+    margin: 0 0 0 -30px;
+  }
+  @media (max-width: 335px) {
+    margin: 0 0 0 -50px;
+    transform: scale(0.7);
+  }
+  
 }
 
 .main__form-rooms {
