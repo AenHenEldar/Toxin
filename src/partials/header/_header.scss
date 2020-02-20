@@ -151,4 +151,20 @@
     display: block;
     direction: rtl;
   }
+
+  .header .button {
+    border: none;
+    text-transform: uppercase;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    color: #BC9CFF;
+  }
+}
+
+@media(max-width: 400px) {
+  .header .button {
+    font-size: 10px;
+  }
 }
