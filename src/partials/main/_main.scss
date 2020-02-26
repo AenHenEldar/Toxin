@@ -29,15 +29,17 @@
   border-radius: 4px;
   margin-top: 70px;
   padding: 40px 30px 30px 30px;
+
   @media (max-width: 400px) {
     transform: scale(0.8);
     margin: 0 0 0 -30px;
   }
+
   @media (max-width: 335px) {
     margin: 0 0 0 -50px;
     transform: scale(0.7);
   }
-  
+
 }
 
 .main__form-rooms {
@@ -61,7 +63,7 @@
 // calendar submenu
 .main__calendar {
   position: absolute;
-  display: block;
+  display: none;
   top: 50%;
   width: 320px;
   height: 369px;
@@ -104,11 +106,12 @@
 }
 
 .main__calendar-item {
-  line-height: 40px;
   font-size: 12px;
+  line-height: 40px;
   align-items: center;
   text-align: center;
   cursor: pointer;
+  padding: 0 11.76px;
 }
 
 .main__calendar-item:first-child {
@@ -117,24 +120,49 @@
   color: #BC9CFF;
 }
 
-.main__calendar-today {
+.main__calendar-today,
+.main__calendar-arrival,
+.main__calendar-departure {
   background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-  border-radius: 22px;
-  padding: 1px 12px 1px 12px;
-  margin: -1px -12px -1px -12px;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  padding-top: 2px;
+  margin: 0 -3.5px -5px -3.5px;
+  transform: translateY(-2px);
   font-weight: bold;
   color: #FFFFFF;
 }
 
-// .main__calendar-monday .main__calendar-item:nth-child(5),
-// .main__calendar-friday .main__calendar-item:nth-child(5) {
-//   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-//   border-radius: 22px;
-//   padding: 1px 13px 1px 13px;
-//   margin: -1px -13px -1px -13px;
-//   font-weight: bold;
-//   color: #FFFFFF;
-// }
+.main__calendar-arrival {
+  z-index: 60;
+}
+
+.main__calendar--small {
+  width: 38px;
+  height: 38px;
+  padding-top: 3px;
+  margin: 0 -0.5px -4px -0.5px;
+}
+
+.main__calendar-arrival,
+.main__calendar-departure {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+.mark-between {
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.3) 0%, rgba(139, 164, 249, 0.4) 100%);
+  transform: translateY(-2px);
+  height: 45px;
+  padding-top: 2px;
+  margin-bottom: -5px;
+}
+
+.mark-between--small {
+  height: 38px;
+  padding-top: 3px;
+  margin-bottom: -4px;
+}
 
 // guest submenu
 .main__guests {
