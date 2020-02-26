@@ -88,6 +88,9 @@ $(document).ready(function () {
                                 item.removeClass('main__calendar-today');
                             }
                             item.addClass('mark-between');
+                            if ((markDepartureDate - markArrivalСolumn) > markBetween) {
+                                $('.mark-between').css('height', '40px').css('margin-bottom', '0');
+                            }
                         }
                     }
                 }
@@ -127,11 +130,11 @@ $(document).ready(function () {
                     markDepartureDate = markDepartureYear * 365 + markDepartureMonth * daysInMonth(markDepartureMonth, markDepartureYear) + markDepartureСolumn + markDepartureRow * 7;
 
                     // set between marks background
-                    
+
                     if (markArrivalRow && markDepartureRow) {
                         let markBetween;
                         let item;
-                        
+
                         for (let j = 2; j <= row; j++) {
                             for (let i = 1; i <= 7; i++) {
                                 item = $(`.main__calendar-list:nth-child(${i}) .main__calendar-item:nth-child(${j})`)
@@ -139,7 +142,7 @@ $(document).ready(function () {
                                 if (item.css('opacity') != '0.4') {
                                     markBetween = year * 365 + month * daysInMonth(month, year) + i + j * 7;
 
-                                    if(todayMark == markBetween) {
+                                    if (todayMark == markBetween) {
                                         console.log('qweqw');
                                         item.addClass('main__calendar-today');
                                     }
@@ -150,7 +153,7 @@ $(document).ready(function () {
                                             todayMark = markBetween;
                                         }
                                         item.addClass('mark-between');
-                                        if(markDepartureRow > j) {
+                                        if (markDepartureRow > j) {
                                             $('.mark-between').css('height', '40px').css('margin-bottom', '0');
                                         }
                                     }
