@@ -97,6 +97,13 @@
 
 @media (max-width: 1000px) {
 
+  .header .bg-button {
+    display: block;
+    background: none;
+    border-radius: none;
+    padding: none;
+  }
+
   .header__item {
     display: block;
     margin-bottom: 20px;

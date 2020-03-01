@@ -2,11 +2,19 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const pug = {
+  test: /\.pug$/,
+  use: ['html-loader?attrs=false', 'pug-html-loader']
+};
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+    signup: './src/signup.js',
+    signin: './src/signin.js'
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
@@ -16,10 +24,7 @@ module.exports = {
         fallback: 'style-loader',
         use: ['css-loader?url=false', 'sass-loader']
       })
-    }, {
-      test: /\.pug$/,
-      use: ['pug-loader']
-    }, {
+    }, pug, {
       test: /\.svg$/,
       loader: 'svg-inline-loader'
     }, {
@@ -45,9 +50,21 @@ module.exports = {
     }, ],
   },
   plugins: [
-    new ExtractTextPlugin('style.css'),
+    new ExtractTextPlugin("[name].css"),
     new HtmlWebpackPlugin({
-      template: './src/index.pug'
+      filename: 'index.html',
+      template: './src/index.pug',
+      inject: false
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'signup.html',
+      template: './src/signup.pug',
+      inject: false
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'signin.html',
+      template: './src/signin.pug',
+      inject: false
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',

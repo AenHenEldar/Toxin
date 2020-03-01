@@ -1,12 +1,13 @@
-// Header
-@import '../partials/header/header';
+// Body
 @import 'reset';
 @import 'font';
 @import 'button';
 @import 'arrow';
+@import 'form';
+// Header
+@import '../partials/header/header';
 // Main
 @import '../partials/main/main';
-@import 'form';
 @import '../partials/main/main-footer/main-footer';
 // footer
 @import '../partials/footer/footer';

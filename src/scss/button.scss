@@ -12,11 +12,14 @@
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 
+
 .bg-button {
+  display: inline-block;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 22px;
   padding: 2px;
 }
+
 
 .button--login {
   color: #BC9CFF;

@@ -1,0 +1,54 @@
+.main {
+    background: url('../src/img/jpg/signinup.jpg') no-repeat center;
+    padding: 30px;
+    background-size: cover;
+
+    p {
+        display: inline-block;
+        margin-bottom: 17px;
+    }
+}
+
+.main__female {
+    opacity: 0.7;
+}
+
+.main__signup {
+    margin: 0 auto;
+    padding: 40px 30px 30px 30px;
+    width: 380px;
+    height: 620px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    input:not([type=radio]) {
+        display: block;
+        width: 100%;
+        opacity: 0.5;
+        cursor: auto;
+    }
+
+    .field {
+        margin-bottom: 10px;
+    }
+
+    .button {
+        display: inline;
+    }
+
+    .main__field-container {
+        margin-top: 20px;
+    }
+
+    .main__login {
+        display: inline-block;
+        margin: 40px 44px 0 0;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+}

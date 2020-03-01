@@ -1,0 +1,18 @@
+// Body
+@import 'reset';
+@import 'font';
+@import 'button';
+@import 'arrow';
+@import 'form';
+// Header
+@import '../partials/header/header';
+// Main
+@import '../partials/main-signin/main';
+// footer
+@import '../partials/footer/footer';
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}

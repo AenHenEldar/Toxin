@@ -1,0 +1,22 @@
+main.main
+    .main__signup
+        form
+            h1 Регистрация аккаунта
+            input.field(type="text" placeholder='Имя')
+            input.field(type="text" placeholder='Фамилия')
+            input.field(type="radio" name='sex' value='male' id='male')
+            p Мужчина
+            input.field(type="radio" name='sex' value='female' id='female')
+            p.main__female Женщина
+            label(for='birthday') дата рождения 
+            input.field(type="text" placeholder='ДД.ММ.ГГГГ' id='birthday' readonly)
+            fieldset.main__field-container
+                legend.main__login-data данные для входа в сервис
+                input.field(type="email" placeholder='Email')
+                input.field(type="password" placeholder='Пароль')
+                p Получать спецпредложения
+                button.button.form-button.button-arrow-right перейти к оплате
+                span.main__login Уже есть аккаунт на Toxin
+                .bg-button: button.button.button--login Войти
+
+
