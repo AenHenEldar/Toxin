@@ -4,19 +4,48 @@ main.main
             h1 Регистрация аккаунта
             input.field(type="text" placeholder='Имя')
             input.field(type="text" placeholder='Фамилия')
-            input.field(type="radio" name='sex' value='male' id='male')
-            p Мужчина
-            input.field(type="radio" name='sex' value='female' id='female')
+            .main__radio.main__radio-male
+                span
+            p.main__male Мужчина
+            .main__radio.main__radio-female
+                span
             p.main__female Женщина
             label(for='birthday') дата рождения 
-            input.field(type="text" placeholder='ДД.ММ.ГГГГ' id='birthday' readonly)
+            input.field.main__date-field.main__birthday-field(type="text" placeholder='ДД.ММ.ГГГГ' id='birthday' readonly)
             fieldset.main__field-container
                 legend.main__login-data данные для входа в сервис
                 input.field(type="email" placeholder='Email')
                 input.field(type="password" placeholder='Пароль')
+                .main__special-offer
+                    span
                 p Получать спецпредложения
                 button.button.form-button.button-arrow-right перейти к оплате
-                span.main__login Уже есть аккаунт на Toxin
-                .bg-button: button.button.button--login Войти
+                a(href="signin.html"): span.main__login Уже есть аккаунт на Toxin
+                a(href="signin.html"): .bg-button: button.button.button--login Войти
+
+        .main__calendar
+          .main__calendar-wrapper
+            .main__calendar-header
+              .arrow-left
+              h2 Август 2019
+              .arrow-right
+            .main__calendar-main
+              ul.main__calendar-list.main__calendar-monday
+                li.main__calendar-item Пн
+              ul.main__calendar-list.main__calendar-tuesday
+                li.main__calendar-item Вт
+              ul.main__calendar-list.main__calendar-wednesday
+                li.main__calendar-item Ср
+              ul.main__calendar-list.main__calendar-thursday
+                li.main__calendar-item Чт
+              ul.main__calendar-list.main__calendar-friday
+                li.main__calendar-item Пт
+              ul.main__calendar-list.main__calendar-saturday
+                li.main__calendar-item Сб
+              ul.main__calendar-list.main__calendar-sunday
+                li.main__calendar-item Вс
+            .main__calendar-footer
+              a.main__link#clear(href="#1") очистить
+              a.main__link.main__link--apply#apply(href="#2") применить
 
 

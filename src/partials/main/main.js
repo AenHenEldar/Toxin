@@ -1,24 +1,24 @@
 $(document).ready(function () {
 
-    let today = new Date();
-    let todayMark;
-    let currentMonth = today.getMonth();
-    let currentYear = today.getFullYear();
-    let months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентрябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
-    let markArrivalYear = currentYear;
-    let markArrivalMonth = currentMonth;
-    let markDepartureYear = currentYear;
-    let markDepartureMonth = currentMonth;
-    let markArrivalRow;
-    let markArrivalСolumn;
-    let markDepartureRow;
-    let markDepartureСolumn;
-    let markArrivalDate;
-    let markDepartureDate;
-    let markArrival = 'main__calendar-arrival';
-    let markDeparture = 'main__calendar-departure';
-    let markArrivalDay;
-    let markDepartureDay;
+    let today = new Date(),
+        todayMark,
+        currentMonth = today.getMonth(),
+        currentYear = today.getFullYear(),
+        months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентрябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+        markArrivalYear = currentYear,
+        markArrivalMonth = currentMonth,
+        markDepartureYear = currentYear,
+        markDepartureMonth = currentMonth,
+        markArrivalRow,
+        markArrivalСolumn,
+        markDepartureRow,
+        markDepartureСolumn,
+        markArrivalDate,
+        markDepartureDate,
+        markArrival = 'main__calendar-arrival',
+        markDeparture = 'main__calendar-departure',
+        markArrivalDay,
+        markDepartureDay;
 
     function daysInMonth(month, year) {
         return new Date(year, month, 0).getDate();
@@ -224,21 +224,12 @@ $(document).ready(function () {
         $('.main__calendar-header h2').html(months[currentMonth] + ' ' + currentYear);
         showCalendar(currentMonth, currentYear);
     })
-    
-    // let markArrivalYear = currentYear;
-    // let markArrivalMonth = currentMonth;
-    // let markDepartureYear = currentYear;
-    // let markDepartureMonth = currentMonth;
-    // let markArrivalRow;
-    // let markArrivalСolumn;
-    // let markDepartureRow;
-    // let markDepartureСolumn;
 
     function addFromToDate() {
 
         if (markArrivalRow && markDepartureRow) {
-            $('.main__arrival-field').attr('placeholder', markArrivalDay + '.' + markArrivalMonth + '.' + markArrivalYear);
-            $('.main__departure-field').attr('placeholder', markDepartureDay + '.' + markDepartureMonth + '.' + markDepartureYear);
+            $('.main__arrival-field').attr('placeholder', markArrivalDay + '.' + (Number(markArrivalMonth) + 1) + '.' + markArrivalYear);
+            $('.main__departure-field').attr('placeholder', markDepartureDay + '.' + (Number(markDepartureMonth) + 1) + '.' + markDepartureYear);
         }
 
     }

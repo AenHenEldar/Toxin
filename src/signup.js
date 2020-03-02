@@ -1,2 +1,2 @@
 import './scss/signup.scss';
-import './partials/header/header.js';
+import './partials/main-signup/main.js';
