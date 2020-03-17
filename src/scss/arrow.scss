@@ -31,6 +31,11 @@
   border-right: 2px solid rgba(31, 32, 65, 0.5);
 }
 
+.arrow-down.active::before,
+.input-arrow-down.active::before {
+  transform: rotate(-135deg);
+}
+
 .input-arrow-down:before {
   right: 20px;
   bottom: 35px;
@@ -122,4 +127,3 @@
   height: 13px;
   border-bottom: 2px solid #8BA4F9;
 }
-

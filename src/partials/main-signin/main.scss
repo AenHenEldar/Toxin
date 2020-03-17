@@ -1,0 +1,54 @@
+.main {
+    background: url('../src/img/jpg/signinup.jpg') no-repeat center;
+    padding: 30px;
+    background-size: cover;
+}
+
+.main__signin {
+    margin: 0 auto;
+    padding: 40px 30px 30px 30px;
+    width: 380px;
+    height: 358px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    @media (max-width: 450px) {
+        transform: scale(0.8);
+        margin: -15% -10%;
+    }
+
+    @media (max-width: 370px) {
+        transform: scale(0.7);
+        margin: -25% -20%;
+    }
+}
+
+input {
+    display: block;
+    width: 100%;
+    opacity: 0.5;
+
+    &:not([id=birthday]) {
+        cursor: auto;
+    }
+}
+
+.field {
+    margin-bottom: 10px;
+}
+
+.button {
+    display: inline;
+}
+
+.main__login {
+    display: inline-block;
+    margin: 40px 48px 0 0;
+    color: #000000;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
