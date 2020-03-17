@@ -216,9 +216,12 @@ $(document).ready(function () {
     })
 
     function addFromToDate() {
+        $('.arrow-calendar').removeClass('active');
 
-        if (markArrivalRow && markDepartureRow) {
+        if (markArrivalRow) {
             $('.main__arrival-field').attr('placeholder', markArrivalDay + '.' + (Number(markArrivalMonth) + 1) + '.' + markArrivalYear);
+        }
+        if (markDepartureRow) {
             $('.main__departure-field').attr('placeholder', markDepartureDay + '.' + (Number(markDepartureMonth) + 1) + '.' + markDepartureYear);
         }
 
